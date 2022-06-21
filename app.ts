@@ -1,15 +1,14 @@
-function add(n1:number,n2:number, showResult: boolean, resultPhrase: string):number | void {
-  const result = n1 + n2;
-  if(showResult) {
-    console.log(resultPhrase + result)
-  } else {
-    return n1 + n2
-  }
+function add(n1: number, n2: number): number {
+  return n1 + n2;
 }
 
-const number1 = 5;
-const number2 = 3;
-const printResult = true;
-const resultPhrase = "Result is ";
 
-const result = add(number1, number2, printResult, resultPhrase);
+function printResults(num: number): void {
+  console.log('Result: ' + num);
+}
+
+printResults(add(5, 12));
+
+function exitFunction(bul: boolean): undefined {
+  return
+}
