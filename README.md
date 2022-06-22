@@ -19,4 +19,8 @@ https://www.udemy.com/course/understanding-typescript/learn/lecture/16888066#ove
 
 ### [union-aliases.ts]
 ...
-
+### [functions.ts]
+...
+### [unknown-and-never]
+...
+[Everyday Types-TSDocs](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
