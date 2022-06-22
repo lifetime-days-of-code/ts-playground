@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
     "noEmitOnError": true,
-  }
+  },
+  "exclude": ["node_modules", "ts-files-storage"]
 }
