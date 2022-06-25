@@ -73,3 +73,38 @@ tsc --watch
   ]
 }
 ```
+
+If the `lib` option is not set or commented out some defaults are asumed. Depending on your target version.
+
+You can allow the creation of a source maps with the `"sourceMap": true` option. It helps with debugging. It allows the browser to understand and display ts files in the development tools. You can put breakpoints directly into the .ts files.
+
+The `outDir` and `rootDir` options helps with organizing your files. The `outDir` option sets the target folder in which the compiled js files should be stored. Usualy is set to `dist` folder. Wit `rootDir` you can say explicitly where your root ts files live.
+```json
+{
+  ...
+  "outDir": "./dist", 
+  "rootDir": "./src",
+  "removeComments": true // removes all comments you may have in the compiled js file.
+}
+```
+
+`noEmitOnError` option disallow a creation of a problematic files. 
+`strict` option is preferable to always be used
+
+There are some ts config options that can help you with your code quality:
+```json
+{
+  "noUnusedLocalVariables": true,
+  "noUnusedParameters": true,
+  "noImplicitReturns": true
+}
+```
+---
+Useful resources: 
+* tsconfig Docs: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+
+* Compiler Config Docs: https://www.typescriptlang.org/docs/handbook/compiler-options.html
+
+* VS Code TS Debugging: https://code.visualstudio.com/docs/typescript/typescript-debugging
+
+---
