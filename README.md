@@ -108,3 +108,6 @@ Useful resources:
 * VS Code TS Debugging: https://code.visualstudio.com/docs/typescript/typescript-debugging
 
 ---
+
+## Section 4: Next-generation JavaScript & TypeScript
+##### [src/next-gen.ts]
