@@ -1,67 +1,55 @@
-class Department {
-  protected employees: string[] = [];
+// interface Pesron {
+//   name: string;
+//   age:number;
 
-  constructor(private readonly id: string, public name: string) {
+//   greet(pharese: string): void
+// }
 
+// let user1: Pesron;
+
+// user1 = {
+//   name: 'Plamen',
+//   age: 3,
+//   greet(phrase:string) {
+//     console.log(phrase + ' ' + this.name)
+//   }
+// }
+
+// user1.greet('Hi there')
+
+// type AddFn = (a:number, b:number) => number
+interface AddFn {
+  (a:number,b:number):number
+}
+
+let add: AddFn;
+
+add = (n1: number, n2:number)  => {
+  return n1 + n2;
+}
+interface Named {
+  readonly name: string; // can't be changed after it's initialized
+  outputName?: string;
+}
+//You can extend with more than one interface. The must be separated by coma
+interface Greetable  extends Named {
+  greet(phrase: string): void;
+}
+
+class Person implements Greetable {
+  name: string;
+  age = 30;
+  constructor(n: string) {
+    this.name = n;
   }
-
-  describe(this: Department) {
-    console.log('Department: ' + this.id + ':' + this.name);
-  }
-
-  addEmployee(employee: string) {
-    this.employees.push(employee);
-  }
-
-  printEmployeeInformation() {
-    console.log(this.employees.length)
-    console.log(this.employees)
+  greet(phrase: string) {
+    console.log(phrase + ' ' + this.name);
   }
 }
 
+let user1: Greetable;
+user1 = new Person('Plamen');
+//user1.name = 'Mitev'// trows an error because name is readonly
 
-class ITDepartment extends Department {
-  admins: string[]
-  constructor(id: string, admins: string[]) {
-    super(id, 'IT');
-    this.admins = admins;
-  }
-
-}
-
-class AccountingDepartment extends Department {
-  constructor(id: string, private reports: string[]) {
-    super(id, 'Accounting');
-  }
-  addEmployee(name: string) {
-    if(name === "Max") {
-      return;
-    }
-
-    this.employees.push(name)
-  }
-  addReports(text: string) {
-    this.reports.push(text)
-  }
-  printReports () {
-    console.log(this.reports)
-  }
-}
-
-const accounting = new AccountingDepartment('d1',[])
-accounting.addReports('Something got wrong')
-accounting.printReports();
-
-console.log(accounting)
-accounting.addEmployee('Plamen')
-accounting.addEmployee('Mitev')
-accounting.addEmployee('Max')
-accounting.addEmployee('Manu')
-
-const it = new ITDepartment('d2', ['Pulmen'])
-it.addEmployee('Plamen')
-it.addEmployee('Mitev')
-
-
-
-console.log(it)
+user1.greet('Hi there I am ');
+console.log(user1)
