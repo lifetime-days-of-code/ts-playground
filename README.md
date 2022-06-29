@@ -158,3 +158,13 @@ More on (JS) Classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 More on TS Interfaces: https://www.typescriptlang.org/docs/handbook/2/objects.html
 
 ---
+##### [ts-files/advance-types.ts]
+
+More on Advanced Types: 
+https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
+
+### Generics
+[TypeScript Docs - Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+
+##### [working-with-generic-type-variables.ts]
+##### [hello-world-of-generics.ts]
