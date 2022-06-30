@@ -132,7 +132,8 @@ Interfasce vs custom type:
 
   - interface can only be used to descrive the structure of an object.
   - another thing you can do with interfacs which you would also be able to do with custom types is you can implement an interface in a class. You can implement multiple interfaces by separating them by a coma.
-  We can add other propertirs to the class but we are forsed to implement the logic of the interface into the class. 
+    We can add other propertirs to the class but we are forsed to implement the logic of the interface into the class.
+
   ```js
   interface Greetable {
     name: string;
@@ -150,21 +151,29 @@ Interfasce vs custom type:
     }
   }
   ```
+
   - interfaces usualy are used to share logic between classes.
+
 ---
+
 Usefull links
 More on (JS) Classes: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
 
 More on TS Interfaces: https://www.typescriptlang.org/docs/handbook/2/objects.html
 
 ---
+
 ##### [ts-files/advance-types.ts]
 
-More on Advanced Types: 
+More on Advanced Types:
 https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
 
 ### Generics
+
 [TypeScript Docs - Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 
 ##### [working-with-generic-type-variables.ts]
+
 ##### [hello-world-of-generics.ts]
+
+##### [merge-generic-func.ts]
