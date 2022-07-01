@@ -177,3 +177,40 @@ https://www.typescriptlang.org/docs/handbook/2/types-from-types.html
 ##### [hello-world-of-generics.ts]
 
 ##### [merge-generic-func.ts]
+##### [generic-classes-functions.ts]
+Generics gives us flexibility combined with type safety.
+We are flexible regarding the values we pass in   or the values  we use in a class, at leas as long as we add here  to the possible  constrains which you might have added.
+```ts
+class DataStorage<T extends string | number | boolean> {
+  private data: T[];
+  
+  addItem(item: T) {
+    this.data.indexOf(item) === 1 {
+      return
+    }
+    this.data.splice(this.data.indexOf(item), 1)
+  }
+  removeItem(item:T) {
+    // logic to remove item
+  }
+  getItems() {
+    return [...this.data]
+  }
+}
+```
+But we got full type support  for what we then do with the class or with the result of  a generic function.
+```ts
+const textStorage = new DataStorage<string>();
+textStorage.addItem('Plamen')
+textStorage.addItem('Mitev')
+textStorage.removeItem('Mitev')
+console.log(textStorage.getItems())
+
+const numberStorage = new DataStorage<number>();
+```
+ Because TypeScript then knows which concrete type we pass in what we call  the function here, or when or when we instantiate the class  here, here we then set  a concrete type, but we don't lock this class or this function down to that concrete type when we create it . Instead we are flexible and might just provie some constrains. But of course these constrains also are optional and you might have some generic classes or generic functions which have  no constrains and some  which have  a lot  of constrains.
+
+[Generic utility types](https://www.typescriptlang.org/docs/handbook/utility-types.html)
+##### [generic-utility-types.ts]
+
+More on Generics: https://www.typescriptlang.org/docs/handbook/generics.html
