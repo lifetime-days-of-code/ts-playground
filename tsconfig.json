@@ -8,6 +8,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
+    "experimentalDecorators": true,
     //the lib here is redundant because if we remove/comment we get the same setting 
     // by default from the "target": "es6" property.
     "lib": [
